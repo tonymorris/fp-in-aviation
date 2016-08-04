@@ -4,6 +4,7 @@ module Data.Aviation.Stratux.Demo where
 
 import Control.Applicative((<*>))
 import Control.Concurrent(threadDelay)
+import Control.Monad(forever)
 import Control.Monad.IO.Class(MonadIO(liftIO))
 import Control.Monad.Trans.Either(EitherT, runEitherT)
 import Data.Aviation.Stratux
@@ -11,6 +12,7 @@ import Data.String(String)
 import Control.Lens((^.), Getting)
 import Data.Bool(Bool)
 import Data.Either(Either)
+import Data.Function(($))
 import Data.Functor((<$>))
 import Data.Int(Int)
 import Data.Text(Text)
@@ -121,10 +123,10 @@ loop ::
   -> f a
   -> f ()
 loop d x =
-  do  a <- x
-      liftIO (print a)
-      liftIO (threadDelay d)
-      loop d x
+  forever $
+    do  a <- x
+        liftIO (print a)
+        liftIO (threadDelay d)
 
 loop4 ::
   (MonadIO f, Show a) =>
