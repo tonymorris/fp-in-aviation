@@ -47,40 +47,46 @@ thesituation ::
 thesituation =
   getSituation tmorrisuriauth "" "" 
 
+onthesituation ::
+  Getting a Situation a
+  -> EitherT String IO a
+onthesituation g =
+  (^. g) <$> thesituation
+
 thepressurealtitude ::
   EitherT String IO Double
 thepressurealtitude =
-  (^. pressureAlt) <$> thesituation
+  onthesituation pressureAlt
 
 thepitch ::
   EitherT String IO Double
 thepitch =
-  (^. pitch) <$> thesituation
+  onthesituation pitch
 
 theroll ::
   EitherT String IO Double
 theroll =
-  (^. roll) <$> thesituation
+  onthesituation roll
 
 theheading ::
   EitherT String IO Double
 theheading =
-  (^. gyroHeading) <$> thesituation
+  onthesituation gyroHeading
 
 thetemp ::
   EitherT String IO Double
 thetemp =
-  (^. temp) <$> thesituation
+  onthesituation temp
 
 thelatitude ::
   EitherT String IO Double
 thelatitude =
-  (^. lat) <$> thesituation
+  onthesituation lat
 
 thelongitude ::
   EitherT String IO Double
 thelongitude =
-  (^. lon) <$> thesituation
+  onthesituation lon
 
 theposition ::
   EitherT String IO (Double, Double)
@@ -90,32 +96,32 @@ theposition =
 theaccuracy ::
   EitherT String IO Double
 theaccuracy =
-  (^. accuracy) <$> thesituation
+  onthesituation accuracy
 
 theverticalspeed ::
   EitherT String IO Double
 theverticalspeed =
-  (^. gpsVertVel) <$> thesituation
+  onthesituation gpsVertVel
 
 theverticalaccuracy ::
   EitherT String IO Double
 theverticalaccuracy =
-  (^. accuracyVert) <$> thesituation
+  onthesituation accuracyVert
 
 theheight ::
   EitherT String IO Double
 theheight =
-  (^. heightAboveEllipsoid) <$> thesituation
+  onthesituation heightAboveEllipsoid
 
 thecourse ::
   EitherT String IO Double
 thecourse =
-  (^. trueCourse) <$> thesituation
+  onthesituation trueCourse
 
 thegroundspeed ::
   EitherT String IO Int
 thegroundspeed =
-  (^. groundSpeed) <$> thesituation
+  onthesituation groundSpeed
 
 loop ::
   (MonadIO f, Show a) =>
