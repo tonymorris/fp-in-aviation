@@ -147,9 +147,9 @@ Are electronic logbooks OK?
 digitlist :: Prism$'$ Int [Digit]
 arn :: Lens$'$ Aviator [Digit]
 logbookaviator :: Lens$'$ (Logbook a b c d) Aviator
-logbook1007036 :: Logbook a b c d
+mylogbook :: Logbook a b c d
 
-$\lambda$> logbook1007036 ^.
+$\lambda$> mylogbook ^.
       logbook . logbookaviator . arn . re digitlist
 1007036
 \end{lstlisting}
@@ -196,9 +196,9 @@ folded :: Foldable f => IndexedFold Int (f a) a
 _AircraftFlightEntry ::
       Prism$'$ (Entry a b c d) (AircraftFlight, a)
 flightaircraft :: Lens$'$ AircraftFlight Aircraft
-logbook1007036 :: Logbook a b c d
+mylogbook :: Logbook a b c d
 
-$\lambda$> :t logbook1007036 ^..
+$\lambda$> :t mylogbook ^..
       logbook .
       logbookentries .
       _Wrapped .
@@ -231,7 +231,7 @@ $\lambda$> :t findOf
             flightaircraft . 
             aircraftRegistration)
           "VH-VVO")
-      logbook1007036
+      mylogbook
 Maybe AircraftFlight
 \end{lstlisting}
 \end{block}
@@ -256,7 +256,7 @@ $\lambda$> mapMOf_
           Getter examResultMaximum)
         )
       putStrLn
-      logbook1007036
+      mylogbook
 31 out of 40
 38 out of 40
 38 out of 40
@@ -275,7 +275,7 @@ flightaircraft :: Lens$'$ AircraftFlight Aircraft
 aircraftRegistration :: Lens$'$ Aircraft String
 
 $\lambda$> :t
-      logbook1007036 ^..
+      mylogbook ^..
       logbook .
       logbookentries .
       _Wrapped .
@@ -303,7 +303,7 @@ $\lambda$> foldOf
         daynight .
         dayDayNight
       )
-      logbook1007036
+      mylogbook
 TimeAmount {_hours = 4, _tenthofhour = 8}
 \end{lstlisting}
 \end{block}
@@ -313,7 +313,7 @@ TimeAmount {_hours = 4, _tenthofhour = 8}
 \frametitle{Use-case}
 \begin{block}{Print the entire logbook to a single, printable HTML web page}
 \begin{lstlisting}[style=haskell,mathescape]
-$\lambda$> :t htmlLogbook logbook1007036
+$\lambda$> :t htmlLogbook mylogbook
 Html ()
 \end{lstlisting}
 \end{block}
