@@ -1,97 +1,68 @@
 \begin{frame}
 \frametitle{Civil Aviation in Australia}
-\begin{itemize}
-\item<1-> Federally regulated by Civil Aviation Safety Authority (CASA).
-\item<2-> Services, such as weather, provided by Airservices Australia.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Civil Aviation in Australia}
-\begin{block}{and we don't want this to happen}
-\includegraphics[height=0.5\textheight]{image/railway-gauge.png}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Civil Aviation in Australia}
-\begin{block}{so these also exist}
-\begin{itemize}
-\item<1-> International Air Services Commission, Australia (IASC).
-\item<2-> International Civil Aviation Organisation (ICAO).
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Civil Aviation in Australia}
-\begin{block}{Australian aviation legislation}
-\begin{itemize}
-\item<1-> Australian Commonwealth, Civil Aviation Act 1988.
-\item<2-> Under CAA1988, is Civil Aviation Safety Regulations 1998.
-\item<3-> The Civil Aviation Regulation 1988 (CAR) is replaced by CASR.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Civil Aviation in Australia}
-\begin{block}{CASR 61.345 \emph{(pilot logbooks)}}
+\begin{block}{CASR1998 REG 61.345 \emph{(pilot logbooks)}}
 \includegraphics[height=0.6\textheight]{image/casr-logbook.png}
 \end{block}
 \end{frame}
 
 \begin{frame}
 \frametitle{Civil Aviation in Australia}
-\begin{block}{CASR 61.345 \emph{(pilot logbooks)}}
+\begin{block}{CASR1998 REG 61.345 \emph{(pilot logbooks)}}
 Are electronic logbooks OK?
 \end{block}
 \end{frame}
 
 \begin{frame}
 \frametitle{Civil Aviation in Australia}
-\begin{block}{Yes. CASR 61.365(3)}
+\begin{block}{Yes. CASR1998 REG 61.365(3)}
 \includegraphics[height=0.3\textheight]{image/casr-logbook-production.png}
 \end{block}
 \end{frame}
 
 \begin{frame}
 \frametitle{Pilot logbooks}
-\begin{block}{Introducing the pilot logbook cottage industry}
+\begin{center}
+Introducing the pilot logbook cottage industry
+\includegraphics[height=0.1\textheight]{image/reddit-logbooks.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pilot logbooks}
+\begin{center}{Excel?}
 \includegraphics[height=0.1\textheight]{image/logbook-1.png}
-\end{block}
+\end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Pilot logbooks}
-\begin{block}{Introducing the pilot logbook cottage industry}
+\begin{center}{Google spreadsheet?}
 \includegraphics[height=0.1\textheight]{image/logbook-2.png}
-\end{block}
+\end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Pilot logbooks}
+\frametitle{blah blah I am hostage to proprietary crap blah blah}
 \begin{block}{Introducing the pilot logbook cottage industry}
 \includegraphics[height=0.08\textheight]{image/logbook-3.png}
 \end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Pilot logbooks}
+\frametitle{I love proprietary crap!}
 \begin{block}{Introducing the pilot logbook cottage industry}
 \includegraphics[height=0.05\textheight]{image/logbook-4.png}
 \end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Pilot logbooks}
+\frametitle{I hate some proprietary crap, when I cross the date line}
 \begin{block}{Introducing the pilot logbook cottage industry}
 \includegraphics[height=0.05\textheight]{image/logbook-5.png}
 \end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Pilot logbooks}
 \begin{block}{Introducing the pilot logbook cottage industry}
 \includegraphics[height=0.05\textheight]{image/logbook-6.png}
 \end{block}
@@ -99,7 +70,7 @@ Are electronic logbooks OK?
 
 \begin{frame}
 \frametitle{Pilot logbooks}
-\begin{block}{Introducing the pilot logbook cottage industry}
+\begin{block}{umm where's my logbook gone?}
 \includegraphics[height=0.4\textheight]{image/logbook-7.png}
 \end{block}
 \par
@@ -108,18 +79,18 @@ Are electronic logbooks OK?
 
 \begin{frame}
 \frametitle{Pilot logbooks}
-\begin{block}{This is me, \textbf{when not flying}}
-\includegraphics[height=0.5\textheight]{image/holy-shit.png}
+\begin{block}{Pick one}
+\includegraphics[height=0.4\textheight]{image/hope-despair.jpg}
 \end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Pilot logbooks \emph{for responsible pilots}}
+\frametitle{Pilot logbooks}
 \begin{block}{Pilot logbook requirements}
 \begin{itemize}
 \item<1-> Data loss impossible, including logbook history, with merge.
-\item<2-> First-class logbook-related values for composition.
-\item<3-> Values that can \emph{close over} other values.
+\item<2-> First-class logbook-related data type values for composition.
+\item<3-> Values that can \emph{close over} other values (function arguments).
 \item<4-> Ability for \emph{arbitrary} reporting.
 \item<5-> \textbf{You can see where I am going, innit?}
 \end{itemize}
@@ -128,14 +99,14 @@ Are electronic logbooks OK?
 
 \begin{frame}
 \frametitle{Pilot logbook}
-\begin{block}{A responsible, CASR 61.x compliant pilot uses}
+\begin{block}{A responsible, CASR1998 REG 61.x compliant pilot uses}
 \begin{itemize}
 \item<1-> Haskell data type (sums and products) for logbook.
 \item<1-> Lenses for querying and reporting.
 \item<1-> Pilot logbook zipper for navigating a logbook.
-\item<1-> A pretty-printer to meet CASR 61.365 requirements.
+\item<1-> A pretty-printer to meet CASR1998 REG 61.365 requirements.
 \item<1-> Revision control (git) for maintaining zero data loss.
-\item<1-> Publishes open-source logbook libraries.
+\item<1-> Publishes open-source logbook libraries as a good citizen.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -146,8 +117,8 @@ Are electronic logbooks OK?
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
 digitlist :: Prism$'$ Int [Digit]
 arn :: Lens$'$ Aviator [Digit]
-logbookaviator :: Lens$'$ (Logbook a b c d) Aviator
-mylogbook :: Logbook a b c d
+logbookaviator :: Lens$'$ Logbook Aviator
+mylogbook :: Logbook
 
 $\lambda$> mylogbook ^.
       logbook . logbookaviator . arn . re digitlist
@@ -161,11 +132,11 @@ $\lambda$> mylogbook ^.
 \begin{block}{Modify: Set the digit at index 2 of the ARN to 5}
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
 arn :: Lens$'$ Aviator [Digit]
-logbookaviator :: Lens$'$ (Logbook a b c d) Aviator
+logbookaviator :: Lens$'$ Logbook Aviator
 
 $\lambda$> :t logbook . logbookaviator . arn %~
       \d -> d & ix 2 .~ x5
-Logbook a b c d -> Logbook a b c d
+Logbook -> Logbook
 \end{lstlisting}
 \end{block}
 \end{frame}
@@ -174,14 +145,14 @@ Logbook a b c d -> Logbook a b c d
 \frametitle{Use-case}
 \begin{block}{Modify: Upper-case the surname of the logbook owner}
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-logbookaviator :: Lens$'$ (Logbook a b c d) Aviator
+logbookaviator :: Lens$'$ Logbook Aviator
 surname :: Lens$'$ Aviator String
 map toUpper :: String -> String
 
 $\lambda$> :t over
       (logbook . logbookaviator . surname)
       (map toUpper)
-Logbook a b c d -> Logbook a b c d
+Logbook -> Logbook
 \end{lstlisting}
 \end{block}
 \end{frame}
@@ -190,20 +161,20 @@ Logbook a b c d -> Logbook a b c d
 \frametitle{Use-case}
 \begin{block}{Query: Aircraft from all flights}
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-logbookentries :: Lens (Logbook a b c d) (Entries a b c d)
-_Wrapped :: Iso$'$ (Entries a b c d) [Entry a b c d]
+logbookentries :: Lens Logbook Entries
+_Wrapped :: Iso$'$ Entries [Entry]
 folded :: Foldable f => IndexedFold Int (f a) a 
 _AircraftFlightEntry ::
-      Prism$'$ (Entry a b c d) (AircraftFlight, a)
+      Prism$'$ Entry AircraftFlight
 flightaircraft :: Lens$'$ AircraftFlight Aircraft
-mylogbook :: Logbook a b c d
+mylogbook :: Logbook
 
 $\lambda$> :t mylogbook ^..
       logbook .
       logbookentries .
       _Wrapped .
       folded .
-      _AircraftFlightEntry . _1 .
+      _AircraftFlightEntry .
       flightaircraft
 [Aircraft]
 \end{lstlisting}
@@ -214,9 +185,9 @@ $\lambda$> :t mylogbook ^..
 \frametitle{Use-case}
 \begin{block}{Query: Find first flight in aircraft registration VH-VVO}
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-logbookentries :: Lens (Logbook a b c d) (Entries a b c d)
+logbookentries :: Lens Logbook Entries
 _AircraftFlightEntry ::
-      Prism$'$ (Entry a b c d) (AircraftFlight, a)
+      Prism$'$ Entry AircraftFlight
 flightaircraft :: Lens$'$ AircraftFlight Aircraft
 aircraftRegistration :: Lens$'$ Aircraft String
 
@@ -225,7 +196,7 @@ $\lambda$> :t findOf
         logbookentries . 
         _Wrapped . 
         folded . 
-        _AircraftFlightEntry . _1)
+        _AircraftFlightEntry)
         ( elemOf
           (
             flightaircraft . 
@@ -242,14 +213,14 @@ Maybe AircraftFlight
 \begin{block}{Print: pretty-print all exam results}
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
 _ExamEntry ::
-      Prism$'$ (Entry a b c d) (Exam, c)
+      Prism$'$ Entry Exam
 examResult :: Lens$'$ Exam Int
 examResultMaximum :: Lens$'$ Exam Int
 
 $\lambda$> mapMOf_
       ( logbook . logbookentries .
         _Wrapped . folded .
-        _ExamEntry . _1 .
+        _ExamEntry .
         runGetter
           ((\x y -> show x ++ $\text{" out of "}$ ++ show y) <$\text{\$}$>
           Getter examResult <*>
@@ -268,9 +239,9 @@ $\lambda$> mapMOf_
 \frametitle{Use-case}
 \begin{block}{Query: All aircraft flights as pilot in-command}
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-logbookentries :: Lens (Logbook a b c d) (Entries a b c d)
+logbookentries :: Lens Logbook Entries
 _AircraftFlightEntry ::
-      Prism$'$ (Entry a b c d) (AircraftFlight, a)
+      Prism$'$ Entry AircraftFlight
 flightaircraft :: Lens$'$ AircraftFlight Aircraft
 aircraftRegistration :: Lens$'$ Aircraft String
 
@@ -280,7 +251,7 @@ $\lambda$> :t
       logbookentries .
       _Wrapped .
       folded .
-      _AircraftFlightEntry . _1 .
+      _AircraftFlightEntry .
       filtered
         (elemOf (command . _InCommand) ())
 [AircraftFlight]
@@ -297,7 +268,7 @@ $\lambda$> foldOf
         logbookentries .
         _Wrapped .
         folded .
-        _AircraftFlightEntry . _1 .
+        _AircraftFlightEntry .
         filtered
           (elemOf (command . _InCommand) ()) .
         daynight .
@@ -311,7 +282,7 @@ TimeAmount {_hours = 4, _tenthofhour = 8}
 
 \begin{frame}[fragile]
 \frametitle{Use-case}
-\begin{block}{Print the entire logbook to a single, printable HTML web page}
+\begin{block}{Print the entire logbook to a single, printable HTML web page \emph{CASR1998 REG 61.365}}
 \begin{lstlisting}[style=haskell,mathescape]
 $\lambda$> :t htmlLogbook mylogbook
 Html ()
@@ -324,8 +295,5 @@ Html ()
 \frametitle{Use-case}
 \begin{block}{Query of arbitrary obtuseness}
 All flights where, if the departure and arrival date is the same day (UTC), and that date-of-month is a multiple of 7, unless either there was an intermediate flight path point of YSCN, or the time the logbook owner was PiC for the first three legs of the flight, is between 2.0 hours and the total sum of hours of dual flight in aircraft registered VH-AFR.
-
-\emph{code too big to fit on screen}
 \end{block}
 \end{frame}
-
