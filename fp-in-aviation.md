@@ -9,11 +9,11 @@ seriously, we will have a look at the legacy that has led to the way things are,
 and how to improve by applying our programming skills.
 
 We will look at:
-* how aviation safety is regulated
-* how aeronautical services are provided to flight operators
-* how aeronautical navigation is conducted and regulated
-* how the weight and balance for a flight is conducted
-* the methods by which aircraft and ground coordinate between each other
+* how aviation safety is regulated.
+* how aeronautical services are provided to flight operators.
+* how aeronautical navigation is conducted and regulated.
+* how the weight and balance for a flight is conducted.
+* the methods by which aircraft and ground coordinate between each other.
 
 We will see:
 * some real (and basic) data management problems in aviation, that very
