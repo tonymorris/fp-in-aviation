@@ -12,8 +12,6 @@ homepage:           https://github.com/tonymorris/fp-in-aviation
 bug-reports:        https://github.com/tonymorris/fp-in-aviation/issues
 cabal-version:      >= 1.10
 build-type:         Custom
-extra-source-files: changelog.md
-
 source-repository   head
   type:             git
   location:         git@github.com:tonymorris/fp-in-aviation.git

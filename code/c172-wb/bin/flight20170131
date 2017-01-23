@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cabal build && ./dist/build/c172-preflight/c172-preflight
+
