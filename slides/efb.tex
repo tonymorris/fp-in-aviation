@@ -46,7 +46,7 @@ The pilot in command of an aircraft must not commence a flight if he or she has 
 \item<1-> It unfolds out to 500mm x 1000mm.
 \item<2-> Updated every 3 months (approx).
 \item<3-> Similar to another chart; VNC.
-\item<4-> It is physically impossible for these documents to be ready accessible. \tiny{Let's pretend.}
+\item<4-> It is physically impossible for these documents to be readily accessible. \tiny{Let's pretend.}
 \end{itemize}
 \end{block}
 \end{frame}
@@ -143,7 +143,7 @@ the paper charts are the authoritative data source.
 \begin{block}{Yes}
 \includegraphics[height=0.5\textheight]{image/vtc-amberley-greenbank.jpg}
 \begin{itemize}
-\item \tiny{Amberley RAAF is conditionally \textbf{RA2}}
+\item \tiny{Amberley RAAF is conditionally \textbf{RA1}}
 \item \tiny{Greenbank Army is \textbf{RA3} SFC to 2000}
 \end{itemize}
 \end{block}
@@ -151,7 +151,7 @@ the paper charts are the authoritative data source.
 
 \begin{frame}
 \frametitle{CASR1998 REG 175}
-\begin{block}{My nightmares are made of this stuff}
+\begin{block}{My nightmares are made of this stuff \tiny{\emph{(AIP EMERG 5.12)}}}
 \includegraphics[height=0.5\textheight]{image/ersa-interception.png}
 \end{block}
 \end{frame}
@@ -182,7 +182,7 @@ but
 
 \begin{frame}
 \frametitle{ZK-SML}
-\begin{block}{VFR into IMC \emph{likely}}
+\begin{block}{VFR into IMC}
 \begin{itemize}
 \item<1-> VFR into IMC is a dangerous flight condition where the pilot has lost outside visual reference e.g. due to weather
 \item<2-> It is particularly dangerous if the pilot is untrained and/or the aircraft is ill-equipped to handle instrument conditions
@@ -194,7 +194,7 @@ but
 
 \begin{frame}
 \frametitle{ZK-SML}
-\begin{block}{Accident Report excerpt \emph{1.16.1}}
+\begin{block}{Accident Report excerpt \tiny{\emph{(1.16.1)}}}
 \begin{quote}
 Assistance was sought from the New Zealand agent for the MGL Avionics EFIS system installed in the aircraft.  While reviewing the aircraft's flight path based on the SSR data on a computer based simulator, two major errors in the EFIS navigation software were discovered. 
 \end{quote}
@@ -203,7 +203,7 @@ Assistance was sought from the New Zealand agent for the MGL Avionics EFIS syste
 
 \begin{frame}
 \frametitle{ZK-SML}
-\begin{block}{Accident Report excerpt \emph{1.16.2}}
+\begin{block}{Accident Report excerpt \tiny{\emph{(1.16.2)}}}
 \begin{quote}
 It was found that the moving map display did not accurately display the 3717 feet spot height for Mount Duppa.  Due to the positioning of a map join which passes through the `3', the spot height for Mount Duppa was corrupted and was displayed as 1717 feet.  Refer to the spot height next to the aircraft symbol on the map display in figure 2. 
 \end{quote}
@@ -212,14 +212,14 @@ It was found that the moving map display did not accurately display the 3717 fee
 
 \begin{frame}
 \frametitle{ZK-SML}
-\begin{block}{Accident Report excerpt \emph{Figure 2}}
+\begin{block}{Accident Report excerpt \tiny{\emph{(Figure 2)}}}
 \includegraphics[height=0.7\textheight]{image/zk-sml-map.png}
 \end{block}
 \end{frame}
 
 \begin{frame}
 \frametitle{ZK-SML}
-\begin{block}{Accident Report excerpt \emph{1.16.3}}
+\begin{block}{Accident Report excerpt \tiny{\emph{(1.16.3)}}}
 \begin{quote}
 A further error affected the synthetic terrain display and warnings.  An error of approximately 600 feet existed between the actual terrain height and the modelled terrain height in the EFIS terrain data base for the accident flight.  This error led to the synthetic terrain displaying terrain indications associated with the modelled terrain of approximately 600 feet lower than the actual terrain. 
 \end{quote}
@@ -228,7 +228,7 @@ A further error affected the synthetic terrain display and warnings.  An error o
 
 \begin{frame}
 \frametitle{ZK-SML}
-\begin{block}{Accident Report excerpt \emph{1.16.4}}
+\begin{block}{Accident Report excerpt \tiny{\emph{(1.16.4)}}}
 \begin{quote}
 The New Zealand agent for MGL Avionics Ltd immediately contacted the manufacturer and reported these errors.  It transpired that the New Zealand terrain data used by MGL Avionics Ltd was based on publically available terrain data available from NASA.  The NASA terrain data used averages of the surrounding spot heights which had induced errors leading to the under reading of the actual terrain heights displayed on the EFIS. 
 \end{quote}
@@ -247,10 +247,11 @@ If you wish to share my frustration, the full report will blow your mind.
 \frametitle{Programming}
 \begin{block}{What programming tools can help here?}
 \begin{itemize}
-\item<1-> revision control with contributions from \emph{arbitrary sources}
+\item<1-> revision controlled, open-source aeronautical data with contributions from \emph{arbitrary sources}
 \item<2-> digital signature on authoritative aeronautical data
 \item<3-> queryable data structures for implementing automated systems
-\item<4-> ``tell the pilot everything they need to know \textbf{and nothing more}''
+\item<4-> ``tell the pilot everything they need to know''
+\item<4-> ``...\textbf{and nothing more}''
 \end{itemize}
 \end{block}
 \end{frame}
@@ -280,8 +281,8 @@ If you wish to share my frustration, the full report will blow your mind.
 \frametitle{Let's fix it}
 \begin{block}{I dream of prototyping/proposing such a system}
 \begin{itemize}
-\item<1-> but from where to source the aeronautical data?
-\item<2-> do airservices source it from Geoscience Australia?
+\item<1-> but from where to source reliable aeronautical data?
+\item<2-> I heard a rumour that airservices sources it from Geoscience Australia.
 \item<3-> and then what?
 \item<4-> HALP
 \end{itemize}
