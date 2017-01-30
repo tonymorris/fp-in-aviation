@@ -11,4 +11,7 @@
   * build script
 * open source files for ADS-B
   * Data/Aviation/Stratux/Demo.hs
-  
+* check external monitor output
+  * if VGA
+    * `xrandr --output eDP-1 --mode 1024x768`
+    * `xrandr --output HDMI-1 --mode 1024x768`
