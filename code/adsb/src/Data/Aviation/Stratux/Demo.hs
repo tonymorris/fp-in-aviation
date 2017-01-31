@@ -134,7 +134,7 @@ demo2 =
 tmorrisuri ::
   String
 tmorrisuri =
-  "stratux.tmorris.intra" -- 192.168.43.142"
+  "192.168.43.142"
 
 tmorrisport ::
   Int
