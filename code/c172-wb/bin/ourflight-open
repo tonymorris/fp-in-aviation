@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cabal build && ./dist/build/c172-preflight/c172-preflight && okular dist/ourflight.pdf
+cabal build && ./dist/build/c172-preflight/c172-preflight && okular --presentation dist/ourflight.pdf
 
