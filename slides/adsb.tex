@@ -50,7 +50,6 @@ ADS-B is an electronic system aboard aircraft that broadcasts certain informatio
 \begin{itemize}
 \item<1-> We can receive Mode-S ADS-B signals with a SDR.
 \item<2-> Raspberry-pi, DVB Tuner, 1090MHz antenna.
-\item<3-> But we can also do more.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -78,13 +77,6 @@ However, we will be transmitting over TCP (SSH).
 
 \begin{frame}
 \frametitle{Portable ADS-B receiver hardware}
-\begin{block}{Portable ADS-B receiver hardware in prototype stage}
-\includegraphics[height=0.5\textheight]{image/adsb-hardware-prototype.png}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
 \begin{block}{Portable ADS-B receiver hardware}
 \includegraphics[height=0.5\textheight]{image/adsb-hardware.png}
 \end{block}
@@ -103,55 +95,11 @@ However, we will be transmitting over TCP (SSH).
 
 \begin{frame}
 \frametitle{Portable ADS-B receiver hardware}
-\begin{block}{RTL2832U Digital DVB-T}
-\includegraphics[height=0.4\textheight]{image/ebay-dvb-tuner.png}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
 \begin{block}{Dual 1090MHz Antennae}
 \includegraphics[height=0.5\textheight]{image/adsb-hardware-antennae.png}
 \begin{itemize}
 \item Copper ground plane can be seen.
 \end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
-\begin{block}{Raspberry Pi 3}
-\includegraphics[height=0.5\textheight]{image/adsb-hardware-rpi3.png}
-\begin{itemize}
-\item Raspberry Pi 3 with onboard wifi.
-\item Creates local wireless network.
-\item Running forked open-source http://stratux.me/
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
-\begin{block}{Raspberry Pi 3}
-\includegraphics[height=0.4\textheight]{image/ebay-rpi3.png}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
-\begin{block}{Edimax Wifi adapter}
-\includegraphics[height=0.5\textheight]{image/adsb-hardware-edimax.png}
-\begin{itemize}
-\item Edimax wifi NIC for wireless client.
-\item Connects to 4G and opens SSH connection to home server for transmission.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
-\begin{block}{Edimax Wifi adapter}
-\includegraphics[height=0.4\textheight]{image/ebay-edimax.png}
 \end{block}
 \end{frame}
 
@@ -169,13 +117,6 @@ However, we will be transmitting over TCP (SSH).
 
 \begin{frame}
 \frametitle{Portable ADS-B receiver hardware}
-\begin{block}{VK-162 GPS}
-\includegraphics[height=0.4\textheight]{image/ebay-vk162.png}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
 \begin{block}{RY835AI}
 \includegraphics[height=0.5\textheight]{image/adsb-hardware-ry835ai.png}
 \tiny
@@ -185,24 +126,6 @@ However, we will be transmitting over TCP (SSH).
 \item Barometer provides air pressure (altitude).
 \item Thermometer provides outside air temperature.
 \item GPS (GLONASS) available but not used.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
-\begin{block}{RY835AI}
-\includegraphics[height=0.4\textheight]{image/ebay-ry835ai.png}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Portable ADS-B receiver hardware}
-\begin{block}{Battery}
-\includegraphics[height=0.5\textheight]{image/adsb-hardware-battery.png}
-\begin{itemize}
-\item USB 5V.
-\item Tested to provide 11 hours running.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -232,13 +155,6 @@ However, we will be transmitting over TCP (SSH).
 \frametitle{Portable ADS-B receiver software}
 \begin{block}{Situation record data type}
 \includegraphics[height=0.6\textheight]{image/stratux-situation-record.png}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Network Traffic Relaying}
-\begin{block}{Connections}
-\includegraphics[height=0.32\textheight]{image/adsb-networking.png}
 \end{block}
 \end{frame}
 
