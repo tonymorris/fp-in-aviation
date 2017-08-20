@@ -134,7 +134,7 @@ demo2 =
 tmorrisuri ::
   String
 tmorrisuri =
-  "192.168.43.142"
+  "192.168.43.235"
 
 tmorrisport ::
   Int
