@@ -25,7 +25,7 @@ library
 
   build-depends:
                       base < 5 && >= 4
-                    , stratux == 0.0.8
+                    , stratux == 0.0.9
                     , network-uri
                     , either
                     , lens
