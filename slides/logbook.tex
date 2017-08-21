@@ -102,36 +102,6 @@ Introducing the pilot logbook cottage industry
 
 \begin{frame}[fragile]
 \frametitle{Use-case}
-\begin{block}{Query: Aviation Reference Number (ARN) of logbook owner}
-\begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-digitlist :: Prism$'$ Int [Digit]
-arn :: Lens$'$ Aviator [Digit]
-logbookaviator :: Lens$'$ Logbook Aviator
-mylogbook :: Logbook
-
-$\lambda$> mylogbook ^.
-      logbook . logbookaviator . arn . re digitlist
-1007036
-\end{lstlisting}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Use-case}
-\begin{block}{Modify: Set the digit at index 2 of the ARN to 5}
-\begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-arn :: Lens$'$ Aviator [Digit]
-logbookaviator :: Lens$'$ Logbook Aviator
-
-$\lambda$> :t logbook . logbookaviator . arn %~
-      \d -> d & ix 2 .~ x5
-Logbook -> Logbook
-\end{lstlisting}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Use-case}
 \begin{block}{Modify: Upper-case the surname of the logbook owner}
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
 logbookaviator :: Lens$'$ Logbook Aviator
@@ -193,57 +163,6 @@ $\lambda$> :t findOf
           "VH-VVO")
       mylogbook
 Maybe AircraftFlight
-\end{lstlisting}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Use-case}
-\begin{block}{Print: pretty-print all exam results}
-\begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-_ExamEntry ::
-      Prism$'$ Entry Exam
-examResult :: Lens$'$ Exam Int
-examResultMaximum :: Lens$'$ Exam Int
-
-$\lambda$> mapMOf_
-      ( logbook . logbookentries .
-        _Wrapped . folded .
-        _ExamEntry .
-        runGetter
-          ((\x y -> show x ++ $\text{" out of "}$ ++ show y) <$\text{\$}$>
-          Getter examResult <*>
-          Getter examResultMaximum)
-        )
-      putStrLn
-      mylogbook
-31 out of 40
-38 out of 40
-38 out of 40
-\end{lstlisting}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Use-case}
-\begin{block}{Query: All aircraft flights as pilot in-command}
-\begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-logbookentries :: Lens Logbook Entries
-_AircraftFlightEntry ::
-      Prism$'$ Entry AircraftFlight
-flightaircraft :: Lens$'$ AircraftFlight Aircraft
-aircraftRegistration :: Lens$'$ Aircraft String
-
-$\lambda$> :t
-      mylogbook ^..
-      logbook .
-      logbookentries .
-      _Wrapped .
-      folded .
-      _AircraftFlightEntry .
-      filtered
-        (elemOf (command . _InCommand) ())
-[AircraftFlight]
 \end{lstlisting}
 \end{block}
 \end{frame}
