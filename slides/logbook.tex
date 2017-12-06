@@ -112,16 +112,61 @@ Introducing the pilot logbook cottage industry
 \end{block}
 \end{frame}
 
+\begin{frame}
+\frametitle{Pilot logbook}
+\begin{block}{Here is the problem}
+\begin{itemize}
+\item<1-> We all know and agree that immutable objects have significant advantages for our code.
+\item<1-> This idea has been known since the 1930s as: Functional Programming.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pilot logbook}
+\begin{block}{Here is the problem}
+\begin{itemize}
+\item<1-> but a na{\"\i}ve effort toward achieving this thesis results in several, significant practical problems.
+\item<1-> and we are somewhat aware of these problems.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pilot logbook}
+\begin{block}{For example}
+given a logbook\ldots
+\begin{itemize}
+\item that has an aviator\ldots
+\item that has an ARN\ldots
+\item that has 0 or many digits\ldots
+\end{itemize}
+find the first digit that is even and, if it exists, add 1 to it
+\end{block}
+\emph{Logbook.java}
+\end{frame}
+
+% Here is the problem
+% We all know and agree that immutable objects have significant advantages for our code. We generally call this idea: Functional Programming.
+% but a na{\"\i}ve effort toward achieving this thesis results in several, significant practical problems
+
+% For example, given a logbook, that has an aviator, that has an ARN, that has 0 or many digits...
+% find the first digit that is even and, if it exists, then add 1 to it.
+
 \begin{frame}[fragile]
 \frametitle{Use-case}
-\begin{block}{Modify: Upper-case the surname of the logbook owner}
-% logbookaviator :: Lens$'$ Logbook Aviator
-% surname :: Lens$'$ Aviator String
-% map toUpper :: String -> String
+\begin{block}{Modify: Find the first digit that is even and, if it exists, add 1 to it}
 \begin{lstlisting}[style=haskell,basicstyle=\scriptsize\ttfamily,mathescape]
-$\lambda$> :t over
-      (logbook . logbookaviator . surname)
-      (map toUpper)
+$\lambda$> :t over (singular
+        ( 
+          logbook .
+          logbookaviator .
+          arn .
+          traverse .
+          filtered digiteven
+        )
+      )
+      successor
 Logbook -> Logbook
 \end{lstlisting}
 \end{block}
