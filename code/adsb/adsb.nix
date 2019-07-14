@@ -1,6 +1,5 @@
-{ mkDerivation, base, directory, doctest, either, filepath, lens
-, network-uri, QuickCheck, stdenv, stratux, template-haskell, text
-, time, transformers
+{ mkDerivation, base, either, lens, network-uri, stdenv, stratux
+, text, time, transformers
 }:
 mkDerivation {
   pname = "fp-in-aviation";
@@ -8,9 +7,6 @@ mkDerivation {
   src = ./.;
   libraryHaskellDepends = [
     base either lens network-uri stratux text time transformers
-  ];
-  testHaskellDepends = [
-    base directory doctest filepath QuickCheck template-haskell
   ];
   homepage = "https://github.com/tonymorris/fp-in-aviation";
   description = "A demonstration of the stratux library";
